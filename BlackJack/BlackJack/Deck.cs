@@ -69,6 +69,47 @@ namespace BlackJack
             }
         }
 
+        public void PlayerDeal(Player player)
+        {
+            Card card = cards[0];
+            Card card1 = cards[1];
+            card.ShowFace = true;
+            card1.ShowFace = true;
+            cards.RemoveAt(0);
+            cards.RemoveAt(0);
+            player.Hand1.Add(card);
+            player.Hand1.Add(card1);
+        }
+        public void DealerDeal(Dealer dealer)
+        {
+            Card card = cards[0];
+            Card card1 = cards[1];
+            card.ShowFace = true;
+            card1.ShowFace = false;
+            cards.RemoveAt(0);
+            cards.RemoveAt(0);
+            dealer.Hand.Add(card);
+            dealer.Hand.Add(card1);
+        }
+
+        public void DealerHit(Dealer dealer)
+        {
+            if (dealer.Hand.Count == 2)
+                dealer.Hand[1].ShowFace = true;
+            Card card = cards[0];
+            card.ShowFace = true;
+            cards.RemoveAt(0);
+            dealer.Hand.Add(card);
+        }
+
+        public void PlayerHit(Player player)
+        {
+            Card card = cards[0];
+            card.ShowFace = true;
+            cards.RemoveAt(0);
+            player.Hand1.Add(card);
+        }
+
         public string ToString()
         {
             StringBuilder sb = new StringBuilder();

@@ -10,11 +10,13 @@ namespace BlackJack
     {
         public string Value { get; set; }
         public string Type { get; set; }
+        public bool ShowFace { get; set; }
 
         public Card(string val, string type)
         {
             Value = val;
             Type = type;
+            ShowFace = false;
         }
 
         public string ToString()
