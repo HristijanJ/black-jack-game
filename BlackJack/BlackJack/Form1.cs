@@ -12,10 +12,18 @@ namespace BlackJack
 {
     public partial class Form1 : Form
     {
+        private Deck deck;
         public Form1()
         {
             InitializeComponent();
+            deck = new Deck();
+            
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            deck.ShuffleDeck();
+            MessageBox.Show(deck.ToString());
+        }
     }
 }

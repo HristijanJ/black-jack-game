@@ -16,5 +16,10 @@ namespace BlackJack
             Value = val;
             Type = type;
         }
+
+        public string ToString()
+        {
+            return Value + Type + " ";
+        }
     }
 }
