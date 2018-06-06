@@ -11,12 +11,14 @@ namespace BlackJack
         public string Value { get; set; }
         public string Type { get; set; }
         public bool ShowFace { get; set; }
+        public bool SoftValue { get; set; } // Za kecot bidejki moze da bide 1 ili 11
 
         public Card(string val, string type)
         {
             Value = val;
             Type = type;
             ShowFace = false;
+            SoftValue = false;
         }
 
         public string ToString()

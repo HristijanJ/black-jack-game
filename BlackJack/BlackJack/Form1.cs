@@ -49,12 +49,12 @@ namespace BlackJack
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dealer.HandValue() < 17)
-            {
+            //if (dealer.HandValue() < 17)
+            //{
                 deck.DealerHit(dealer);
                 MessageBox.Show(dealer.ShowHand());
                 label2.Text = "Dealer Hand Value: " + dealer.HandValue().ToString();
-            }
+           // }
         }
 
     }

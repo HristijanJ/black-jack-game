@@ -30,13 +30,21 @@ namespace BlackJack
 
         public int Hand1Value()
         {
+            int numberOfNotSoftValuedAces = 0;
             int res = 0;
-            foreach(Card c in Hand1)
+            foreach (Card c in Hand1)
             {
                 if (c.ShowFace)
                 {
-                    if (c.Value == "A")
+                    if (c.Value == "A" && c.SoftValue == false)
+                    {
                         res += 11;
+                        numberOfNotSoftValuedAces++;
+                    }
+                    else if (c.Value == "A" && c.SoftValue == true)
+                    {
+                        res += 1;
+                    }
                     else if (c.Value == "J")
                         res += 12;
                     else if (c.Value == "Q")
@@ -45,6 +53,19 @@ namespace BlackJack
                         res += 14;
                     else
                         res += int.Parse(c.Value);
+                }
+            }
+            while (res > 21 && numberOfNotSoftValuedAces > 0)
+            {
+                foreach (Card c in Hand1)
+                {
+                    if (c.Value == "A" && c.SoftValue == false)
+                    {
+                        res -= 10;
+                        c.SoftValue = true;
+                        numberOfNotSoftValuedAces--;
+                        break;
+                    }
                 }
             }
             return res;
