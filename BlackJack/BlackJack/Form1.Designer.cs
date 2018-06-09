@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.playerCashLabel = new System.Windows.Forms.Label();
             this.betCashLabel = new System.Windows.Forms.Label();
+            this.doubleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dealButton
@@ -134,11 +135,22 @@
             this.betCashLabel.TabIndex = 10;
             this.betCashLabel.Text = "Bet: ";
             // 
+            // doubleButton
+            // 
+            this.doubleButton.Location = new System.Drawing.Point(379, 265);
+            this.doubleButton.Name = "doubleButton";
+            this.doubleButton.Size = new System.Drawing.Size(136, 23);
+            this.doubleButton.TabIndex = 11;
+            this.doubleButton.Text = "Double";
+            this.doubleButton.UseVisualStyleBackColor = true;
+            this.doubleButton.Click += new System.EventHandler(this.doubleButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 461);
+            this.Controls.Add(this.doubleButton);
             this.Controls.Add(this.betCashLabel);
             this.Controls.Add(this.playerCashLabel);
             this.Controls.Add(this.label4);
@@ -169,6 +181,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label playerCashLabel;
         private System.Windows.Forms.Label betCashLabel;
+        private System.Windows.Forms.Button doubleButton;
     }
 }
 

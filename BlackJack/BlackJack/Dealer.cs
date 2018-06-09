@@ -72,7 +72,7 @@ namespace BlackJack
 
         public bool isBlackJack()
         {
-            if (Hand1.Count == 2 && Hand1Value() == 21)
+            if (Hand.Count == 2 && HandValue() == 21)
                 return true;
             return false;
         }
