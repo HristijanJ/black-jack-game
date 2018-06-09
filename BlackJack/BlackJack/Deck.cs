@@ -94,8 +94,6 @@ namespace BlackJack
 
         public void DealerHit(Dealer dealer)
         {
-            if (dealer.Hand.Count == 2)
-                dealer.Hand[1].ShowFace = true;
             Card card = cards[0];
             card.ShowFace = true;
             cards.RemoveAt(0);
@@ -110,7 +108,7 @@ namespace BlackJack
             player.Hand1.Add(card);
         }
 
-        public string ToString()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             foreach(Card c in cards)

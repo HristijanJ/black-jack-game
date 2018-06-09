@@ -21,7 +21,7 @@ namespace BlackJack
             SoftValue = false;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return Value + Type + " ";
         }

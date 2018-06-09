@@ -8,6 +8,7 @@ namespace BlackJack
 {
     public class Player
     {
+        public int Cash { get; set; }
         public List<Card> Hand1 { get; set; }
         public List<Card> Hand2 { get; set; }
         public List<Card> Hand3 { get; set; }
@@ -16,6 +17,7 @@ namespace BlackJack
         public Player()
         {
             Hand1 = new List<Card>();
+            Cash = 2500;
         }
 
         public string ShowHand1()
@@ -46,11 +48,11 @@ namespace BlackJack
                         res += 1;
                     }
                     else if (c.Value == "J")
-                        res += 12;
+                        res += 10;
                     else if (c.Value == "Q")
-                        res += 13;
+                        res += 10;
                     else if (c.Value == "K")
-                        res += 14;
+                        res += 10;
                     else
                         res += int.Parse(c.Value);
                 }
@@ -69,6 +71,13 @@ namespace BlackJack
                 }
             }
             return res;
+        }
+
+        public bool isBlackJack()
+        {
+            if (Hand1.Count == 2 && Hand1Value() == 21)
+                return true;
+            return false;
         }
     }
 }
