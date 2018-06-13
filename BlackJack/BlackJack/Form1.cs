@@ -21,6 +21,7 @@ namespace BlackJack
         private Dealer dealer;
         private String FileName;
         private Serialazible ser;
+        private PictureBox pc;
         public Form1()
         {
 
@@ -296,6 +297,10 @@ namespace BlackJack
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFile();
+        }
+        public void proba()
+        {
+            String.Format("probuvam");
         }
     }
 }
