@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
+    [Serializable]
     public class Deck
     {
         public List<Card> Cards { get; set; }

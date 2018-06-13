@@ -8,3 +8,13 @@ C:\Users\Hristijan Jovanovski\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\Bl
 C:\Users\Hristijan Jovanovski\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
 C:\Users\Hristijan Jovanovski\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\Hristijan Jovanovski\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\bin\Debug\BlackJack.exe.config
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.Form1.resources
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\leon\Documents\GitHub\black-jack-game\BlackJack\BlackJack\obj\Debug\BlackJack.pdb

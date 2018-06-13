@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,10 +19,14 @@ namespace BlackJack
         private int Bet;
         private Player player;
         private Dealer dealer;
+        private String FileName;
+        private Serialazible ser;
         public Form1()
         {
+
             InitializeComponent();
             newGame();
+            ser = new Serialazible(deck, dealer, player,Bet);
         }
 
         public void newGame()
@@ -56,7 +63,7 @@ namespace BlackJack
                 deck.PlayerHit(player);
                 label3.Text = "Player Hand: " + player.ShowHand1();
                 label1.Text = "Player Hand Value: " + player.Hand1Value().ToString();
-                if(player.Hand1Value() > 21)
+                if (player.Hand1Value() > 21)
                 {
                     playerLost();
                     MessageBox.Show("Busted");
@@ -77,7 +84,7 @@ namespace BlackJack
                 label2.Text = "Dealer Hand Value: " + dealer.HandValue().ToString();
                 label4.Text = "Dealer Hand: " + dealer.ShowHand();
             }
-            if(player.isBlackJack() && !dealer.isBlackJack())
+            if (player.isBlackJack() && !dealer.isBlackJack())
             {
                 MessageBox.Show("You win with Black Jack.");
                 blackJackWin();
@@ -132,7 +139,7 @@ namespace BlackJack
 
         private void blackJackWin()
         {
-            player.Cash += (int) (2.5 * Bet);
+            player.Cash += (int)(2.5 * Bet);
             Bet = 0;
             playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
             betCashLabel.Text = "Bet: " + Bet.ToString();
@@ -162,7 +169,7 @@ namespace BlackJack
 
         private void bet500Button_Click(object sender, EventArgs e)
         {
-            if(player.Cash >= 500)
+            if (player.Cash >= 500)
             {
                 player.Cash -= 500;
                 playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
@@ -174,10 +181,10 @@ namespace BlackJack
 
         private void newRound()
         {
-            
+
             bet500Button.Enabled = true;
             dealButton.Enabled = false;
-            hitButton.Enabled = false ;
+            hitButton.Enabled = false;
             standButton.Enabled = false;
             doubleButton.Enabled = false;
             player.Hand1.RemoveRange(0, player.Hand1.Count);
@@ -223,6 +230,72 @@ namespace BlackJack
                 return;
             }
             standButton_Click(sender, e);
+        }
+        private void saveFile()
+        {
+            if (FileName == null)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Black JAck (*.bj)|*.bj";
+                saveFileDialog.Title = "Save Black Jack";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    FileName = saveFileDialog.FileName;
+                }
+            }
+            if (FileName != null)
+            {
+                using (FileStream fileStream = new FileStream(FileName, FileMode.Create))
+                {
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(fileStream, ser);
+                    
+
+                }
+            }
+        }
+
+        private void openFile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Black Jack (*.bj)|*.bj";
+            openFileDialog.Title = "Open Black JAck file";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileName = openFileDialog.FileName;
+                try
+                {
+                    using (FileStream fileStream = new FileStream(FileName, FileMode.Open))
+                    {
+                        IFormatter formater = new BinaryFormatter();
+                        ser = (Serialazible)formater.Deserialize(fileStream);
+                        
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Could not read file: " + FileName);
+                    FileName = null;
+                    return;
+                }
+                Invalidate(true);
+            }
+
+
+        }
+
+          
+
+        private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            saveFile();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFile();
         }
     }
 }
