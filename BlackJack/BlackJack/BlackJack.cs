@@ -1,5 +1,7 @@
 ﻿using System;
+using BlackJack.Properties;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +26,7 @@ namespace BlackJack
         public int playerZbir { get; set; }
         public String dilerHand { get; set; }
         public int dilerZbir { get; set; }
-
-
+        public Image tabla;
 
         public BlackJack()
         {
@@ -34,6 +35,7 @@ namespace BlackJack
             Bet = 0;
             player = new Player();
             dealer = new Dealer();
+            tabla = Resources.tabla;
         }
         
         

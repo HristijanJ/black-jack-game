@@ -69,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,6 +84,200 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="JPEG\tabla.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\2C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\2D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\2H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\2S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\3C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\3D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\3H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\3S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\4C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\4D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\4H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\4S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\5C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\5D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\5H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\5S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\6C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\6D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\6H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\6S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\7C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\7D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\7H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\7S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\8C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\8D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\8H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\8S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\9C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\9D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\9H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\9S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\10C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\10D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\10H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\10S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\AC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\aces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\AD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\AH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\AS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\back_cards-07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\blue_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\Gray_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\Green_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\honor_clubs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\honor_diamond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\honor_heart-14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\honor_spade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\JC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\JD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\JH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\JS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\KC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\KD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\KH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\KS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\purple_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\QC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\QD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\QH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\QS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\Red_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\Yellow_back.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

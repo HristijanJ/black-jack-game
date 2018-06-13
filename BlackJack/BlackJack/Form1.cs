@@ -24,7 +24,9 @@ namespace BlackJack
             InitializeComponent();
             newGame();
             bj = new BlackJack();
-            
+            this.Height = 450;
+            this.Width = 720;
+
         }
         
         public void newGame()
@@ -316,6 +318,6 @@ namespace BlackJack
             label4.Text = bj.dilerHand;
             label2.Text = bj.dilerZbir.ToString();
         }
-       
+
     }
 }
