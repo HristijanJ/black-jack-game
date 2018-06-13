@@ -15,30 +15,26 @@ namespace BlackJack
 {
     public partial class Form1 : Form
     {
-        private Deck deck;
-        private int Bet;
-        private Player player;
-        private Dealer dealer;
+        private BlackJack bj;
         private String FileName;
-        private Serialazible ser;
-        private PictureBox pc;
+        
         public Form1()
         {
 
             InitializeComponent();
             newGame();
-            ser = new Serialazible(deck, dealer, player,Bet);
+            bj = new BlackJack();
+            
         }
-
+        
         public void newGame()
         {
-            deck = new Deck();
-            deck.ShuffleDeck();
-            player = new Player();
-            playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
-            dealer = new Dealer();
-            Bet = 0;
-            betCashLabel.Text = "Bet: " + Bet.ToString();
+            bj = new BlackJack();
+           
+            
+            playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+           
+            betCashLabel.Text = "Bet: " + bj.Bet.ToString();
             dealButton.Enabled = false;
             hitButton.Enabled = false;
             standButton.Enabled = false;
@@ -47,24 +43,24 @@ namespace BlackJack
 
         private void dealButton_Click(object sender, EventArgs e)
         {
-            deck.PlayerDeal(player);
-            deck.DealerDeal(dealer);
-            label1.Text = "Player Hand Value: " + player.Hand1Value().ToString();
-            label2.Text = "Dealer Hand Value: " + dealer.HandValue().ToString();
-            label3.Text = "Player Hand: " + player.ShowHand1();
-            label4.Text = "Dealer Hand: " + dealer.ShowHand();
+            bj.deck.PlayerDeal(bj.player);
+           bj. deck.DealerDeal(bj.dealer);
+            label1.Text = "Player Hand Value: " + bj.player.Hand1Value().ToString();
+            label2.Text = "Dealer Hand Value: " +bj. dealer.HandValue().ToString();
+            label3.Text = "Player Hand: " +bj. player.ShowHand1();
+            label4.Text = "Dealer Hand: " +bj. dealer.ShowHand();
             startFirstRound();
         }
 
         private void hitButton_Click(object sender, EventArgs e)
         {
             doubleButton.Enabled = false;
-            if (player.Hand1Value() < 21)
+            if (bj.player.Hand1Value() < 21)
             {
-                deck.PlayerHit(player);
-                label3.Text = "Player Hand: " + player.ShowHand1();
-                label1.Text = "Player Hand Value: " + player.Hand1Value().ToString();
-                if (player.Hand1Value() > 21)
+                bj.deck.PlayerHit(bj.player);
+                label3.Text = "Player Hand: " + bj.player.ShowHand1();
+                label1.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
+                if (bj.player.Hand1Value() > 21)
                 {
                     playerLost();
                     MessageBox.Show("Busted");
@@ -72,49 +68,49 @@ namespace BlackJack
                     return;
                 }
             }
-            if (player.Hand1Value() == 21)
+            if (bj.player.Hand1Value() == 21)
                 standButton_Click(sender, e);
         }
 
         private void standButton_Click(object sender, EventArgs e)
         {
             doubleButton.Enabled = false;
-            if (dealer.Hand.Count == 2)
+            if (bj.dealer.Hand.Count == 2)
             {
-                dealer.Hand[1].ShowFace = true;
-                label2.Text = "Dealer Hand Value: " + dealer.HandValue().ToString();
-                label4.Text = "Dealer Hand: " + dealer.ShowHand();
+                bj.dealer.Hand[1].ShowFace = true;
+                label2.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
+                label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
             }
-            if (player.isBlackJack() && !dealer.isBlackJack())
+            if (bj.player.isBlackJack() && !bj.dealer.isBlackJack())
             {
                 MessageBox.Show("You win with Black Jack.");
                 blackJackWin();
                 newRound();
                 return;
             }
-            while (dealer.HandValue() < 17)
+            while (bj.dealer.HandValue() < 17)
             {
-                deck.DealerHit(dealer);
-                label2.Text = "Dealer Hand Value: " + dealer.HandValue().ToString();
-                label4.Text = "Dealer Hand: " + dealer.ShowHand();
+                bj.deck.DealerHit(bj.dealer);
+                label2.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
+                label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
             }
-            if (dealer.HandValue() > 21 || dealer.HandValue() < player.Hand1Value())
+            if (bj.dealer.HandValue() > 21 || bj.dealer.HandValue() < bj.player.Hand1Value())
             {
                 MessageBox.Show("Player Won");
                 playerWon();
                 newRound();
                 return;
             }
-            if (dealer.HandValue() == player.Hand1Value())
+            if (bj.dealer.HandValue() == bj.player.Hand1Value())
             {
-                if (dealer.isBlackJack() && !player.isBlackJack())
+                if (bj.dealer.isBlackJack() && !bj.player.isBlackJack())
                 {
                     MessageBox.Show("You lose.");
                     playerLost();
                     newRound();
                     return;
                 }
-                else if (!dealer.isBlackJack() && player.isBlackJack())
+                else if (!bj.dealer.isBlackJack() && bj.player.isBlackJack())
                 {
                     MessageBox.Show("You win with Black Jack.");
                     blackJackWin();
@@ -129,7 +125,7 @@ namespace BlackJack
                     return;
                 }
             }
-            if (dealer.HandValue() <= 21 && dealer.HandValue() > player.Hand1Value())
+            if (bj.dealer.HandValue() <= 21 && bj.dealer.HandValue() > bj.player.Hand1Value())
             {
                 MessageBox.Show("You lose.");
                 playerLost();
@@ -140,42 +136,42 @@ namespace BlackJack
 
         private void blackJackWin()
         {
-            player.Cash += (int)(2.5 * Bet);
-            Bet = 0;
-            playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
-            betCashLabel.Text = "Bet: " + Bet.ToString();
+            bj.player.Cash += (int)(2.5 * bj.Bet);
+           bj. Bet = 0;
+            playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+            betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
 
         private void playerWon()
         {
-            player.Cash += 2 * Bet;
-            Bet = 0;
-            playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
-            betCashLabel.Text = "Bet: " + Bet.ToString();
+            bj.player.Cash += 2 * bj.Bet;
+            bj.Bet = 0;
+            playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+            betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
 
         private void push()
         {
-            player.Cash += Bet;
-            Bet = 0;
-            playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
-            betCashLabel.Text = "Bet: " + Bet.ToString();
+            bj.player.Cash += bj.Bet;
+            bj.Bet = 0;
+            playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+            betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
 
         private void playerLost()
         {
-            Bet = 0;
-            betCashLabel.Text = "Bet: " + Bet.ToString();
+           bj. Bet = 0;
+            betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
 
         private void bet500Button_Click(object sender, EventArgs e)
         {
-            if (player.Cash >= 500)
+            if (bj.player.Cash >= 500)
             {
-                player.Cash -= 500;
-                playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
-                Bet += 500;
-                betCashLabel.Text = "Bet: " + Bet.ToString();
+                bj.player.Cash -= 500;
+                playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+                bj.Bet += 500;
+                betCashLabel.Text = "Bet: " + bj.Bet.ToString();
                 dealButton.Enabled = true;
             }
         }
@@ -188,16 +184,16 @@ namespace BlackJack
             hitButton.Enabled = false;
             standButton.Enabled = false;
             doubleButton.Enabled = false;
-            player.Hand1.RemoveRange(0, player.Hand1.Count);
-            dealer.Hand.RemoveRange(0, dealer.Hand.Count);
+            bj.player.Hand1.RemoveRange(0, bj.player.Hand1.Count);
+            bj.dealer.Hand.RemoveRange(0, bj.dealer.Hand.Count);
             label1.Text = "Player Hand Value: ";
             label2.Text = "Dealer Hand Value: ";
             label3.Text = "Player Hand: ";
             label4.Text = "Dealer Hand: ";
-            if (deck.Cards.Count <= 25)
+            if (bj.deck.Cards.Count <= 25)
             {
-                deck = new Deck();
-                deck.ShuffleDeck();
+                bj.deck = new Deck();
+                bj.deck.ShuffleDeck();
                 MessageBox.Show("Reshuffled deck");
             }
         }
@@ -208,7 +204,7 @@ namespace BlackJack
             dealButton.Enabled = false;
             hitButton.Enabled = true;
             standButton.Enabled = true;
-            if (player.Cash >= Bet && player.Hand1Value() < 21)
+            if (bj.player.Cash >= bj.Bet &&bj. player.Hand1Value() < 21)
             {
                 doubleButton.Enabled = true;
             }
@@ -216,14 +212,14 @@ namespace BlackJack
 
         private void doubleButton_Click(object sender, EventArgs e)
         {
-            deck.PlayerHit(player);
-            player.Cash -= Bet;
-            Bet += Bet;
-            playerCashLabel.Text = "Player Cash: " + player.Cash.ToString();
-            betCashLabel.Text = "Bet: " + Bet.ToString();
-            label3.Text = "Player Hand: " + player.ShowHand1();
-            label1.Text = "Player Hand Value: " + player.Hand1Value().ToString();
-            if (player.Hand1Value() > 21)
+            bj.deck.PlayerHit(bj.player);
+           bj. player.Cash -= bj.Bet;
+            bj.Bet += bj.Bet;
+            playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+            betCashLabel.Text = "Bet: " + bj.Bet.ToString();
+            label3.Text = "Player Hand: " + bj.player.ShowHand1();
+            label1.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
+            if (bj.player.Hand1Value() > 21)
             {
                 playerLost();
                 MessageBox.Show("Busted");
@@ -249,7 +245,7 @@ namespace BlackJack
                 using (FileStream fileStream = new FileStream(FileName, FileMode.Create))
                 {
                     IFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(fileStream, ser);
+                    formatter.Serialize(fileStream, bj);
                     
 
                 }
@@ -269,7 +265,7 @@ namespace BlackJack
                     using (FileStream fileStream = new FileStream(FileName, FileMode.Open))
                     {
                         IFormatter formater = new BinaryFormatter();
-                        ser = (Serialazible)formater.Deserialize(fileStream);
+                        bj = (BlackJack)formater.Deserialize(fileStream);
                         
 
 
@@ -291,16 +287,35 @@ namespace BlackJack
 
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            bj.kesh = playerCashLabel.Text;
+            bj.bet = betCashLabel.Text;
+            bj.deal = dealButton.Enabled;
+            bj.bet500 = bet500Button.Enabled;
+            bj.doub = doubleButton.Enabled;
+            bj.hit = hitButton.Enabled;
+            bj.stand = standButton.Enabled;
+            bj.playerHand = label3.Text;
+            bj.playerZbir = bj.player.Hand1Value();
+            bj.dilerHand = label4.Text;
+            bj.dilerZbir = bj.dealer.HandValue();
             saveFile();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFile();
+            playerCashLabel.Text = bj.kesh;
+            betCashLabel.Text = bj.bet;
+            dealButton.Enabled = bj.deal;
+            bet500Button.Enabled = bj.bet500;
+            doubleButton.Enabled = bj.doub;
+            hitButton.Enabled = bj.hit;
+            standButton.Enabled = bj.stand;
+            label3.Text = bj.playerHand;
+            label1.Text = bj.playerZbir.ToString();
+            label4.Text = bj.dilerHand;
+            label2.Text = bj.dilerZbir.ToString();
         }
-        public void proba()
-        {
-            String.Format("probuvam");
-        }
+       
     }
 }
