@@ -65,12 +65,16 @@ namespace BlackJack
             this.doubleButton = new System.Windows.Forms.Button();
             this.dealButton = new System.Windows.Forms.Button();
             this.hitButton = new System.Windows.Forms.Button();
+            this.comboBoxBets = new System.Windows.Forms.ComboBox();
+            this.placeBetButton = new System.Windows.Forms.Button();
+            this.playerCashLabel = new System.Windows.Forms.Label();
+            this.betCashLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // standButton
             // 
-            this.standButton.Location = new System.Drawing.Point(172, 234);
+            this.standButton.Location = new System.Drawing.Point(171, 208);
             this.standButton.Name = "standButton";
             this.standButton.Size = new System.Drawing.Size(136, 23);
             this.standButton.TabIndex = 2;
@@ -319,7 +323,7 @@ namespace BlackJack
             // 
             // doubleButton
             // 
-            this.doubleButton.Location = new System.Drawing.Point(172, 262);
+            this.doubleButton.Location = new System.Drawing.Point(171, 266);
             this.doubleButton.Name = "doubleButton";
             this.doubleButton.Size = new System.Drawing.Size(136, 23);
             this.doubleButton.TabIndex = 11;
@@ -329,9 +333,9 @@ namespace BlackJack
             // 
             // dealButton
             // 
-            this.dealButton.Location = new System.Drawing.Point(172, 291);
+            this.dealButton.Location = new System.Drawing.Point(29, 172);
             this.dealButton.Name = "dealButton";
-            this.dealButton.Size = new System.Drawing.Size(136, 23);
+            this.dealButton.Size = new System.Drawing.Size(98, 23);
             this.dealButton.TabIndex = 0;
             this.dealButton.Text = "Deal";
             this.dealButton.UseVisualStyleBackColor = true;
@@ -339,7 +343,7 @@ namespace BlackJack
             // 
             // hitButton
             // 
-            this.hitButton.Location = new System.Drawing.Point(172, 205);
+            this.hitButton.Location = new System.Drawing.Point(171, 237);
             this.hitButton.Name = "hitButton";
             this.hitButton.Size = new System.Drawing.Size(136, 23);
             this.hitButton.TabIndex = 5;
@@ -347,12 +351,62 @@ namespace BlackJack
             this.hitButton.UseVisualStyleBackColor = true;
             this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
+            // comboBoxBets
+            // 
+            this.comboBoxBets.FormattingEnabled = true;
+            this.comboBoxBets.Items.AddRange(new object[] {
+            "1",
+            "5\t",
+            "10",
+            "25",
+            "100"});
+            this.comboBoxBets.Location = new System.Drawing.Point(414, 351);
+            this.comboBoxBets.Name = "comboBoxBets";
+            this.comboBoxBets.Size = new System.Drawing.Size(72, 21);
+            this.comboBoxBets.TabIndex = 13;
+            // 
+            // placeBetButton
+            // 
+            this.placeBetButton.Location = new System.Drawing.Point(314, 346);
+            this.placeBetButton.Name = "placeBetButton";
+            this.placeBetButton.Size = new System.Drawing.Size(94, 29);
+            this.placeBetButton.TabIndex = 14;
+            this.placeBetButton.Text = "Place Bet";
+            this.placeBetButton.UseVisualStyleBackColor = true;
+            this.placeBetButton.Click += new System.EventHandler(this.placeBetButton_Click);
+            // 
+            // playerCashLabel
+            // 
+            this.playerCashLabel.AutoSize = true;
+            this.playerCashLabel.BackColor = System.Drawing.Color.Transparent;
+            this.playerCashLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playerCashLabel.Location = new System.Drawing.Point(26, 218);
+            this.playerCashLabel.Name = "playerCashLabel";
+            this.playerCashLabel.Size = new System.Drawing.Size(85, 13);
+            this.playerCashLabel.TabIndex = 15;
+            this.playerCashLabel.Text = "playerCashLabel";
+            // 
+            // betCashLabel
+            // 
+            this.betCashLabel.AutoSize = true;
+            this.betCashLabel.BackColor = System.Drawing.Color.Transparent;
+            this.betCashLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.betCashLabel.Location = new System.Drawing.Point(26, 247);
+            this.betCashLabel.Name = "betCashLabel";
+            this.betCashLabel.Size = new System.Drawing.Size(72, 13);
+            this.betCashLabel.TabIndex = 16;
+            this.betCashLabel.Text = "betCashLabel";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BlackJack.Properties.Resources.tabla;
             this.ClientSize = new System.Drawing.Size(720, 461);
+            this.Controls.Add(this.betCashLabel);
+            this.Controls.Add(this.playerCashLabel);
+            this.Controls.Add(this.placeBetButton);
+            this.Controls.Add(this.comboBoxBets);
             this.Controls.Add(this.doubleButton);
             this.Controls.Add(this.hitButton);
             this.Controls.Add(this.standButton);
@@ -408,6 +462,10 @@ namespace BlackJack
         private System.Windows.Forms.Button doubleButton;
         private System.Windows.Forms.Button dealButton;
         private System.Windows.Forms.Button hitButton;
+        private System.Windows.Forms.ComboBox comboBoxBets;
+        private System.Windows.Forms.Button placeBetButton;
+        private System.Windows.Forms.Label playerCashLabel;
+        private System.Windows.Forms.Label betCashLabel;
     }
 }
 

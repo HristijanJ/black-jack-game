@@ -18,7 +18,7 @@ namespace BlackJack
         public Player()
         {
             Hand1 = new List<Card>();
-            Cash = 2500;
+            Cash = 500;
         }
 
         public string ShowHand1()

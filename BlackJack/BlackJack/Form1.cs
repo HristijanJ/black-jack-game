@@ -26,7 +26,6 @@ namespace BlackJack
             bj = new BlackJack();
             this.Height = 450;
             this.Width = 720;
-
         }
         
         public void newGame()
@@ -47,10 +46,10 @@ namespace BlackJack
         {
             bj.deck.PlayerDeal(bj.player);
            bj. deck.DealerDeal(bj.dealer);
-            label1.Text = "Player Hand Value: " + bj.player.Hand1Value().ToString();
-            label2.Text = "Dealer Hand Value: " +bj. dealer.HandValue().ToString();
-            label3.Text = "Player Hand: " +bj. player.ShowHand1();
-            label4.Text = "Dealer Hand: " +bj. dealer.ShowHand();
+            //playerCashLabel.Text = "Player Hand Value: " + bj.player.Hand1Value().ToString();
+            //betCashLabel.Text = "Dealer Hand Value: " +bj. dealer.HandValue().ToString();
+            //label3.Text = "Player Hand: " +bj. player.ShowHand1();
+            //label4.Text = "Dealer Hand: " +bj. dealer.ShowHand();
             startFirstRound();
         }
 
@@ -60,8 +59,8 @@ namespace BlackJack
             if (bj.player.Hand1Value() < 21)
             {
                 bj.deck.PlayerHit(bj.player);
-                label3.Text = "Player Hand: " + bj.player.ShowHand1();
-                label1.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
+                //label3.Text = "Player Hand: " + bj.player.ShowHand1();
+                //playerCashLabel.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
                 if (bj.player.Hand1Value() > 21)
                 {
                     playerLost();
@@ -80,8 +79,8 @@ namespace BlackJack
             if (bj.dealer.Hand.Count == 2)
             {
                 bj.dealer.Hand[1].ShowFace = true;
-                label2.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
-                label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
+               // betCashLabel.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
+                //label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
             }
             if (bj.player.isBlackJack() && !bj.dealer.isBlackJack())
             {
@@ -93,8 +92,8 @@ namespace BlackJack
             while (bj.dealer.HandValue() < 17)
             {
                 bj.deck.DealerHit(bj.dealer);
-                label2.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
-                label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
+                //betCashLabel.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
+                //label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
             }
             if (bj.dealer.HandValue() > 21 || bj.dealer.HandValue() < bj.player.Hand1Value())
             {
@@ -166,13 +165,15 @@ namespace BlackJack
             betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
 
-        private void bet500Button_Click(object sender, EventArgs e)
+        private void placeBetButton_Click(object sender, EventArgs e)
         {
-            if (bj.player.Cash >= 500)
+            int bet = Int32.Parse(comboBoxBets.Text);
+
+            if (bj.player.Cash >= bet)
             {
-                bj.player.Cash -= 500;
+                bj.player.Cash -= bet;
                 playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
-                bj.Bet += 500;
+                bj.Bet += bet;
                 betCashLabel.Text = "Bet: " + bj.Bet.ToString();
                 dealButton.Enabled = true;
             }
@@ -181,17 +182,17 @@ namespace BlackJack
         private void newRound()
         {
 
-            bet500Button.Enabled = true;
+            //PlayButton.Enabled = true;
             dealButton.Enabled = false;
             hitButton.Enabled = false;
             standButton.Enabled = false;
             doubleButton.Enabled = false;
             bj.player.Hand1.RemoveRange(0, bj.player.Hand1.Count);
             bj.dealer.Hand.RemoveRange(0, bj.dealer.Hand.Count);
-            label1.Text = "Player Hand Value: ";
-            label2.Text = "Dealer Hand Value: ";
-            label3.Text = "Player Hand: ";
-            label4.Text = "Dealer Hand: ";
+            //playerCashLabel.Text = "Player Hand Value: ";
+            //betCashLabel.Text = "Dealer Hand Value: ";
+            //label3.Text = "Player Hand: ";
+            //label4.Text = "Dealer Hand: ";
             if (bj.deck.Cards.Count <= 25)
             {
                 bj.deck = new Deck();
@@ -202,7 +203,7 @@ namespace BlackJack
 
         private void startFirstRound()
         {
-            bet500Button.Enabled = false;
+            //PlayButton.Enabled = false;
             dealButton.Enabled = false;
             hitButton.Enabled = true;
             standButton.Enabled = true;
@@ -219,8 +220,8 @@ namespace BlackJack
             bj.Bet += bj.Bet;
             playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
             betCashLabel.Text = "Bet: " + bj.Bet.ToString();
-            label3.Text = "Player Hand: " + bj.player.ShowHand1();
-            label1.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
+            //label3.Text = "Player Hand: " + bj.player.ShowHand1();
+            //playerCashLabel.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
             if (bj.player.Hand1Value() > 21)
             {
                 playerLost();
@@ -292,13 +293,13 @@ namespace BlackJack
             bj.kesh = playerCashLabel.Text;
             bj.bet = betCashLabel.Text;
             bj.deal = dealButton.Enabled;
-            bj.bet500 = bet500Button.Enabled;
+            //bj.bet500 = PlayButton.Enabled;
             bj.doub = doubleButton.Enabled;
             bj.hit = hitButton.Enabled;
             bj.stand = standButton.Enabled;
-            bj.playerHand = label3.Text;
+            //bj.playerHand = label3.Text;
             bj.playerZbir = bj.player.Hand1Value();
-            bj.dilerHand = label4.Text;
+            //bj.dilerHand = label4.Text;
             bj.dilerZbir = bj.dealer.HandValue();
             saveFile();
         }
@@ -309,15 +310,14 @@ namespace BlackJack
             playerCashLabel.Text = bj.kesh;
             betCashLabel.Text = bj.bet;
             dealButton.Enabled = bj.deal;
-            bet500Button.Enabled = bj.bet500;
+            //PlayButton.Enabled = bj.bet500;
             doubleButton.Enabled = bj.doub;
             hitButton.Enabled = bj.hit;
             standButton.Enabled = bj.stand;
-            label3.Text = bj.playerHand;
-            label1.Text = bj.playerZbir.ToString();
-            label4.Text = bj.dilerHand;
-            label2.Text = bj.dilerZbir.ToString();
+            //label3.Text = bj.playerHand;
+            playerCashLabel.Text = bj.playerZbir.ToString();
+            //label4.Text = bj.dilerHand;
+            betCashLabel.Text = bj.dilerZbir.ToString();
         }
-
     }
 }
