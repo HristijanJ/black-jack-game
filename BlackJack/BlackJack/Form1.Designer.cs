@@ -93,7 +93,7 @@ namespace BlackJack
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(720, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(704, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -402,7 +402,7 @@ namespace BlackJack
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BlackJack.Properties.Resources.tabla;
-            this.ClientSize = new System.Drawing.Size(720, 461);
+            this.ClientSize = new System.Drawing.Size(704, 411);
             this.Controls.Add(this.betCashLabel);
             this.Controls.Add(this.playerCashLabel);
             this.Controls.Add(this.placeBetButton);
@@ -413,7 +413,8 @@ namespace BlackJack
             this.Controls.Add(this.dealButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(500, 499);
+            this.MaximumSize = new System.Drawing.Size(720, 450);
+            this.MinimumSize = new System.Drawing.Size(720, 450);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);

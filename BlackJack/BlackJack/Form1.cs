@@ -17,7 +17,7 @@ namespace BlackJack
     {
         private BlackJack bj;
         private String FileName;
-        
+
         public Form1()
         {
 
@@ -27,14 +27,14 @@ namespace BlackJack
             this.Height = 450;
             this.Width = 720;
         }
-        
+
         public void newGame()
         {
             bj = new BlackJack();
-           
-            
+
+
             playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
-           
+
             betCashLabel.Text = "Bet: " + bj.Bet.ToString();
             dealButton.Enabled = false;
             hitButton.Enabled = false;
@@ -46,7 +46,7 @@ namespace BlackJack
         {
             placeBetButton.Enabled = false;
             bj.deck.PlayerDeal(bj.player);
-           bj. deck.DealerDeal(bj.dealer);
+            bj.deck.DealerDeal(bj.dealer);
             //playerCashLabel.Text = "Player Hand Value: " + bj.player.Hand1Value().ToString();
             //betCashLabel.Text = "Dealer Hand Value: " +bj. dealer.HandValue().ToString();
             //label3.Text = "Player Hand: " +bj. player.ShowHand1();
@@ -142,7 +142,7 @@ namespace BlackJack
         private void blackJackWin()
         {
             bj.player.Cash += (int)(2.5 * bj.Bet);
-           bj. Bet = 0;
+            bj.Bet = 0;
             playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
             betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
@@ -165,7 +165,7 @@ namespace BlackJack
 
         private void playerLost()
         {
-           bj. Bet = 0;
+            bj.Bet = 0;
             betCashLabel.Text = "Bet: " + bj.Bet.ToString();
         }
 
@@ -193,6 +193,7 @@ namespace BlackJack
         {
 
             //PlayButton.Enabled = true;
+            placeBetButton.Enabled = true;
             dealButton.Enabled = false;
             hitButton.Enabled = false;
             standButton.Enabled = false;
@@ -218,7 +219,7 @@ namespace BlackJack
             dealButton.Enabled = false;
             hitButton.Enabled = true;
             standButton.Enabled = true;
-            if (bj.player.Cash >= bj.Bet &&bj. player.Hand1Value() < 21)
+            if (bj.player.Cash >= bj.Bet && bj.player.Hand1Value() < 21)
             {
                 doubleButton.Enabled = true;
             }
@@ -227,10 +228,11 @@ namespace BlackJack
         private void doubleButton_Click(object sender, EventArgs e)
         {
             bj.deck.PlayerHit(bj.player);
-           bj. player.Cash -= bj.Bet;
+            bj.player.Cash -= bj.Bet;
             bj.Bet += bj.Bet;
             playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
             betCashLabel.Text = "Bet: " + bj.Bet.ToString();
+            Invalidate(true);
             //label3.Text = "Player Hand: " + bj.player.ShowHand1();
             //playerCashLabel.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
             if (bj.player.Hand1Value() > 21)
@@ -261,7 +263,7 @@ namespace BlackJack
                 {
                     IFormatter formatter = new BinaryFormatter();
                     formatter.Serialize(fileStream, bj);
-                    
+
 
                 }
             }
@@ -281,7 +283,7 @@ namespace BlackJack
                     {
                         IFormatter formater = new BinaryFormatter();
                         bj = (BlackJack)formater.Deserialize(fileStream);
-                        
+
 
 
                     }
@@ -298,7 +300,7 @@ namespace BlackJack
 
         }
 
-          
+
 
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -327,9 +329,9 @@ namespace BlackJack
             hitButton.Enabled = bj.hit;
             standButton.Enabled = bj.stand;
             //label3.Text = bj.playerHand;
-            playerCashLabel.Text = bj.playerZbir.ToString();
+            //playerCashLabel.Text = bj.playerZbir.ToString();
             //label4.Text = bj.dilerHand;
-            betCashLabel.Text = bj.dilerZbir.ToString();
+            //betCashLabel.Text = bj.dilerZbir.ToString();
         }
 
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -341,5 +343,6 @@ namespace BlackJack
         {
             bj.Draw(e.Graphics);
         }
+
     }
 }
