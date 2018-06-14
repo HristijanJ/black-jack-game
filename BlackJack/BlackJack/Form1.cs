@@ -44,6 +44,7 @@ namespace BlackJack
 
         private void dealButton_Click(object sender, EventArgs e)
         {
+            placeBetButton.Enabled = false;
             bj.deck.PlayerDeal(bj.player);
            bj. deck.DealerDeal(bj.dealer);
             //playerCashLabel.Text = "Player Hand Value: " + bj.player.Hand1Value().ToString();
@@ -51,6 +52,7 @@ namespace BlackJack
             //label3.Text = "Player Hand: " +bj. player.ShowHand1();
             //label4.Text = "Dealer Hand: " +bj. dealer.ShowHand();
             startFirstRound();
+            Invalidate(true);
         }
 
         private void hitButton_Click(object sender, EventArgs e)
@@ -61,6 +63,7 @@ namespace BlackJack
                 bj.deck.PlayerHit(bj.player);
                 //label3.Text = "Player Hand: " + bj.player.ShowHand1();
                 //playerCashLabel.Text = "Player Hand Value: " +bj. player.Hand1Value().ToString();
+                Invalidate(true);
                 if (bj.player.Hand1Value() > 21)
                 {
                     playerLost();
@@ -79,7 +82,8 @@ namespace BlackJack
             if (bj.dealer.Hand.Count == 2)
             {
                 bj.dealer.Hand[1].ShowFace = true;
-               // betCashLabel.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
+                Invalidate(true);
+                // betCashLabel.Text = "Dealer Hand Value: " + bj.dealer.HandValue().ToString();
                 //label4.Text = "Dealer Hand: " + bj.dealer.ShowHand();
             }
             if (bj.player.isBlackJack() && !bj.dealer.isBlackJack())
@@ -167,15 +171,21 @@ namespace BlackJack
 
         private void placeBetButton_Click(object sender, EventArgs e)
         {
-            int bet = Int32.Parse(comboBoxBets.Text);
-
-            if (bj.player.Cash >= bet)
+            if (comboBoxBets.Text.Length == 0)
+                MessageBox.Show("Pick a bet");
+            else
             {
-                bj.player.Cash -= bet;
-                playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
-                bj.Bet += bet;
-                betCashLabel.Text = "Bet: " + bj.Bet.ToString();
-                dealButton.Enabled = true;
+                int bet = Int32.Parse(comboBoxBets.Text);
+                if (bj.player.Cash >= bet)
+                {
+                    bj.player.Cash -= bet;
+                    playerCashLabel.Text = "Player Cash: " + bj.player.Cash.ToString();
+                    bj.Bet += bet;
+                    betCashLabel.Text = "Bet: " + bj.Bet.ToString();
+                    dealButton.Enabled = true;
+                }
+                else
+                    MessageBox.Show("You don't have enough cash!");
             }
         }
 
@@ -199,6 +209,7 @@ namespace BlackJack
                 bj.deck.ShuffleDeck();
                 MessageBox.Show("Reshuffled deck");
             }
+            Invalidate(true);
         }
 
         private void startFirstRound()
@@ -230,6 +241,7 @@ namespace BlackJack
                 return;
             }
             standButton_Click(sender, e);
+            Invalidate(true);
         }
         private void saveFile()
         {
@@ -318,6 +330,16 @@ namespace BlackJack
             playerCashLabel.Text = bj.playerZbir.ToString();
             //label4.Text = bj.dilerHand;
             betCashLabel.Text = bj.dilerZbir.ToString();
+        }
+
+        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show(e.Location.ToString());
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            bj.Draw(e.Graphics);
         }
     }
 }

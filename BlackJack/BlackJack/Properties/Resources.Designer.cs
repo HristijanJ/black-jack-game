@@ -83,9 +83,29 @@ namespace BlackJack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10D1 {
+            get {
+                object obj = ResourceManager.GetObject("_10D1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _10H {
             get {
                 object obj = ResourceManager.GetObject("_10H", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _10H1 {
+            get {
+                object obj = ResourceManager.GetObject("_10H1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,16 +453,6 @@ namespace BlackJack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap aces {
-            get {
-                object obj = ResourceManager.GetObject("aces", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap AD {
             get {
                 object obj = ResourceManager.GetObject("AD", resourceCulture);
@@ -466,86 +476,6 @@ namespace BlackJack.Properties {
         internal static System.Drawing.Bitmap AS {
             get {
                 object obj = ResourceManager.GetObject("AS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap back_cards_07 {
-            get {
-                object obj = ResourceManager.GetObject("back_cards_07", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blue_back {
-            get {
-                object obj = ResourceManager.GetObject("blue_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gray_back {
-            get {
-                object obj = ResourceManager.GetObject("Gray_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Green_back {
-            get {
-                object obj = ResourceManager.GetObject("Green_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap honor_clubs {
-            get {
-                object obj = ResourceManager.GetObject("honor_clubs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap honor_diamond {
-            get {
-                object obj = ResourceManager.GetObject("honor_diamond", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap honor_heart_14 {
-            get {
-                object obj = ResourceManager.GetObject("honor_heart_14", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap honor_spade {
-            get {
-                object obj = ResourceManager.GetObject("honor_spade", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -683,29 +613,9 @@ namespace BlackJack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Red_back {
-            get {
-                object obj = ResourceManager.GetObject("Red_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap tabla {
             get {
                 object obj = ResourceManager.GetObject("tabla", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Yellow_back {
-            get {
-                object obj = ResourceManager.GetObject("Yellow_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

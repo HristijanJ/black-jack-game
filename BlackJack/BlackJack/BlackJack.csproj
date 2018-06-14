@@ -279,5 +279,335 @@
   <ItemGroup>
     <None Include="JPEG\Yellow_back.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\10D1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JPEG\10H1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\2C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\2D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\2H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\2S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\3C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\3D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\3H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\3S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\4C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\4D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\4H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\4S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\5C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\5D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\5H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\5S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\6C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\6D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\6H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\6S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\7C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\7D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\7H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\7S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\8C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\8D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\8H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\8S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\9C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\9D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\9H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\9S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\10C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\10D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\10H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\10S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\AC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\AD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\AH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\AS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\JC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\JD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\JH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\JS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\KC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\KD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\KH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\KS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\purple_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\QC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\QD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\QH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iloveimg-resized\QS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\2C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\2D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\2H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\2S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\3C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\3D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\3H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\3S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\4C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\4D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\4H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\4S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\5C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\5D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\5H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\5S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\6C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\6D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\6H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\6S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\7C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\7D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\7H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\7S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\8C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\8D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\8H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\8S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\9C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\9D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\9H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\9S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\10C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\10D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\10D1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\10H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\10H1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\10S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\AC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\AD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\AH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\AS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\JC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\JD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\JH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\JS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\KC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\KD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\KH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\KS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\purple_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\QC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\QD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\QH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResizedPhotos.0\QS.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,6 @@ namespace BlackJack
     {
         public int Cash { get; set; }
         public List<Card> Hand1 { get; set; }
-        public List<Card> Hand2 { get; set; }
-        public List<Card> Hand3 { get; set; }
-        public List<Card> Hand4 { get; set; }
 
         public Player()
         {
@@ -79,6 +77,14 @@ namespace BlackJack
             if (Hand1.Count == 2 && Hand1Value() == 21)
                 return true;
             return false;
+        }
+        public void Draw(Graphics g)
+        {
+            int i = 315;
+            foreach (Card c in Hand1) {
+                c.Draw(g, new Point(i, 203));
+                i += 15;
+            }
         }
     }
 }

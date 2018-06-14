@@ -37,6 +37,12 @@ namespace BlackJack
             dealer = new Dealer();
             tabla = Resources.tabla;
         }
+
+        public void Draw(Graphics g)
+        {
+            player.Draw(g);
+            dealer.Draw(g);
+        }
         
         
 

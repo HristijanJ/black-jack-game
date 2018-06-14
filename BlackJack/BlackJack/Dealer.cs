@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,6 +77,15 @@ namespace BlackJack
             if (Hand.Count == 2 && HandValue() == 21)
                 return true;
             return false;
+        }
+        public void Draw(Graphics g)
+        {
+            int i = 300;
+            foreach (Card c in Hand)
+            {
+                c.Draw(g, new Point(i, 30));
+                i += 15;
+            }
         }
     }
 }
