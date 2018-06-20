@@ -1,5 +1,5 @@
 #Black Jack Game
-Windows Forms Project by: Hristijan Jovanovski, Adrian Colak, Leon Janevski
+Windows Forms Project by: Hristijan Jovanovski (161151), Adrian Colak (161186), Leon Janevski (161064)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
