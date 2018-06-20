@@ -61,37 +61,21 @@ Windows Forms Project by: Hristijan Jovanovski, Adrian Colak, Leon Janevski
 public int HandValue()
 
         {
-        
             int numberOfNotSoftValuedAces = 0;
-            
             int res = 0;
-            
             foreach (Card c in Hand)
-            
             {
-            
                 if (c.ShowFace)
-                
                 {
-                
                     if (c.Value == "A" && c.SoftValue == false)
-                    
                     {
-                    
-                        res += 11;
-                    
+                        res += 11
                         numberOfNotSoftValuedAces++;
-                        
                     }
-                    
                     else if (c.Value == "A" && c.SoftValue == true)
-                    
                     {
-                    
                         res += 1;
-                        
                     }
-                    
                     else if (c.Value == "J")
                         res += 10;
                     else if (c.Value == "Q")
