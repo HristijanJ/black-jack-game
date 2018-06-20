@@ -334,10 +334,10 @@ namespace BlackJack
             //betCashLabel.Text = bj.dilerZbir.ToString();
         }
 
-        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show(e.Location.ToString());
-        }
+        //private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
+        //{
+        //    MessageBox.Show(e.Location.ToString());
+        //}
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
