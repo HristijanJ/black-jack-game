@@ -344,5 +344,9 @@ namespace BlackJack
             bj.Draw(e.Graphics);
         }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newGame();
+        }
     }
 }
