@@ -45,3 +45,4 @@ Windows Forms Project by: Hristijan Jovanovski, Adrian Colak, Leon Janevski
   - Оваа класа се користи како wrapper класа за да се овозможи зачувување на состојбата на играта. За да се овозможи тоа, класата е [Serializable].
   - Во оваа класата се чуваат објектите од класите Dealer, Deck и Player. Исто така се чуваат состојбите на копчињата и на влогот.
   
+с
